@@ -125,3 +125,33 @@ convertCtoF(-10);
 convertCtoF(20);
 convertCtoF(30);
 convertCtoF(30);
+
+//2
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+reverseString("hello");
+console.log(reverseString("hello"));
+
+reverseString("Howdy");
+console.log(reverseString("Howdy"));
+
+reverseString("Greetings from Earth");
+console.log(reverseString("Greetings from Earth"));
+
+//3
+function factorialize(num) {
+  var cnt = 1;
+  for (var i = 1; i <= num; i++) {
+    cnt *= i;
+  }
+  return cnt;
+}
+
+factorialize(0);
+console.log(factorialize(0));
+factorialize(5);
+console.log(factorialize(5));
+factorialize(20);
+console.log(factorialize(20));
