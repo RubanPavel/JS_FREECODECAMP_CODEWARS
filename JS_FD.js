@@ -110,3 +110,18 @@ function myFunc() {
     console.log("Still going!");
   }
 }
+
+/* Basic Algorithm Scripting */
+
+//1
+function convertCtoF(celsius) {
+  let fahrenheit = Math.ceil((9 / 5) * celsius + 32);
+  return fahrenheit;
+}
+
+convertCtoF(0);
+convertCtoF(-30);
+convertCtoF(-10);
+convertCtoF(20);
+convertCtoF(30);
+convertCtoF(30);
