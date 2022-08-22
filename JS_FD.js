@@ -155,3 +155,83 @@ factorialize(5);
 console.log(factorialize(5));
 factorialize(20);
 console.log(factorialize(20));
+
+//4
+function findLongestWordLength(str) {
+  var longestWord = str.split(" ").sort(function (a, b) {
+    return b.length - a.length;
+  });
+  return longestWord[0].length;
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+//5
+function largestOfFour(arr) {
+  var largestNums = [];
+
+  for (var i in arr) {
+    arr[i].sort((a, b) => {
+      return b - a;
+    });
+
+    largestNums.push(arr[i][0]);
+  }
+  return largestNums;
+}
+
+largestOfFour([
+  [4, 5, 1, 3],
+  [13, 27, 18, 26],
+  [32, 35, 37, 39],
+  [1000, 1001, 857, 1],
+]);
+
+/* ES6 */
+
+//1
+function checkScope() {
+  let j = "function scope";
+  if (true) {
+    let i = "function scope";
+    i = "block scope";
+    console.log("Block scope i is: ", i);
+  }
+  console.log("Function scope i is: ", j);
+  return j;
+}
+
+//2
+const s = [5, 7, 2];
+function editInPlace() {
+  // Only change code below this line
+  s[0] = 2;
+  s[1] = 5;
+  s[2] = 7;
+  // Using s = [2, 5, 7] would be invalid
+  // Only change code above this line
+}
+editInPlace();
+
+//3
+function freezeObj() {
+  const MATH_CONSTANTS = {
+    PI: 3.14,
+  };
+  // Only change code below this line
+
+  Object.freeze(MATH_CONSTANTS);
+  // Only change code above this line
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch (ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS.PI;
+}
+const PI = freezeObj();
+
+//4
+const magic = () => {
+  return new Date();
+};
