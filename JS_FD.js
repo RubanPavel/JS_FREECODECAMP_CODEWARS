@@ -235,3 +235,27 @@ const PI = freezeObj();
 const magic = () => {
   return new Date();
 };
+//6
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(myConcat([1, 2], [3, 4, 5]));
+//7
+const increment = (number, value = 1) => number + value;
+
+//
+let myArray = ["a", "b", "c", "d"];
+// Only change code below this line
+myArray[1] = "a";
+// Only change code above this line
+console.log(myArray);
+
+//
+function mixedNumbers(arr) {
+  // Only change code below this line
+  arr.unshift("I", 2, "three");
+  arr.push(7, "VIII", 9);
+  // Only change code above this line
+  return arr;
+}
+
+console.log(mixedNumbers(["IV", 5, "six"]));
