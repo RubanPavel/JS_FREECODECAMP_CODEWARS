@@ -293,3 +293,14 @@ console.log(
     "FireBrick",
   ])
 );
+//
+function forecast(arr) {
+  // Only change code below this line
+
+  var slicedforecast = arr.slice(2, 4);
+  return slicedforecast;
+}
+let condition = ["cold", "rainy", "warm", "sunny", "cool", "thunderstorms"];
+// Only change code above this line
+console.log(forecast(condition));
+console.log(condition);
